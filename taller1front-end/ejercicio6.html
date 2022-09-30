@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/E6.css">
+</head>
+
+<body>
+    <a href="index.html">
+        <button>Index</button>
+    </a>
+    <main>
+        <form class="form" id="form">
+
+            <div class="form_gp" id="gp_tdocumento">
+                <label for="tdocumento" class="form__label">Tipo Documento</label>
+                <div class="form__gp-input">
+                    <select name="tdocumento" id="tdocumento" class="form__input">
+                        <option value="">Seleccione</option>
+                        <option value="tt">Tarjeta de identidad</option>
+                        <option value="cc">Cedula de ciudadania</option>
+                        <option value="pp">Pasaporte</option>
+                    </select>
+                    <i class="form__val-es fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">Selecciona el tipo de documento.</p>
+            </div>
+
+
+
+
+            <div class="form_gp" id="gp_ndocumento">
+                <label for="ndocumento" class="form__label">Número documento</label>
+                <div class="form__gp-input">
+                    <input type="text" class="form__input" name="ndocumento" id="ndocumento"
+                        placeholder="ingrese su numero de documento">
+                    <i class="form__val-es fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.</p>
+            </div>
+
+
+            <div class="form_gp" id="gp_nombre">
+                <label for="nombre" class="form__label">Nombre</label>
+                <div class="form__gp-input">
+                    <input type="text" class="form__input" name="nombre" id="nombre" placeholder="nombre ">
+                    <i class="form__val-es fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.</p>
+            </div>
+
+
+            <div class="form_gp" id="gp_apellido">
+                <label for="apellido" class="form__label">Apellido</label>
+                <div class="form__gp-input">
+                    <input type="text" class="form__input" name="apellido" id="apellido" placeholder="apellido">
+                    <i class="form__val-es fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">El apellido tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.</p>
+            </div>
+
+
+
+            <div class="form_gp" id="gp_fecha">
+                <label for="fecha" class="form__label">Fecha de nacimiento</label>
+                <div class="form__gp-input">
+                    <input type="date" class="form__input" name="fecha" id="fecha">
+                    <i class="form__val-es fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">Debes ser mayor de edad.</p>
+            </div>
+
+            
+            <div class="form_gp" id="gp_correo">
+                <label for="correo" class="form__label">Correo Electrónico</label>
+                <div class="form__gp-input">
+                    <input type="text" class="form__input" name="correo" id="correo" placeholder="correo">
+                    <i class="form__val-es fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">El correo solo puede contener letras, numeros, puntos, guiones y
+                    guion bajo.</p>
+            </div>
+
+
+
+            
+            <div class="form_gp" id="gp_pass">
+                <label for="pass" class="form__label">Contraseña</label>
+                <div class="form__gp-input">
+                    <input type="pass" class="form__input" name="pass" id="pass">
+                    <i class="form__val-es fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+            </div>
+
+            <div class="form_gp" id="gp_pass2">
+                <label for="pass2" class="form__label">Repetir Contraseña</label>
+                <div class="form__gp-input">
+                    <input type="pass" class="form__input" name="pass2" id="pass2">
+                    <i class="form__val-es fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">Ambas contraseñas deben ser iguales.</p>
+            </div>
+
+
+        
+            <div class="form_gp" id="gp_tm">
+                <label class="form__label">
+                    <input class="form__ck" type="checkbox" name="tm" id="tm">
+                    Acepto los terminos y Condiciones
+                </label>
+            </div>
+
+            <div class="modall" id="tm">
+                <div class="">
+                    <h2 class="">Términos y Condiciones</h2>
+                    <p class="">Lore ipsum dolor sit amet consectetur adipisicing elit. Earum qui atque eum
+                        doloribus aliquid eos doloremque est quae officia, repellendus dolores maxime eligendi vitae
+                        natus aut, libero, deserunt tempora expedita.</p>
+                    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, expedita
+                        delectus. Et, eveniet iusto enim quidem optio voluptates est voluptas repellendus hic, quam
+                        doloribus sequi quia tempore alias. Quibusdam, nulla!</p>
+                    <a href="#" class="button">Aceptar</a>
+                </div>
+            </div>
+            <div class="form_ms" id="form_ms">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el form
+                    correctamente. </p>
+            </div>
+
+            <div class="form_gp form_gp-btn-enviar">
+                <button type="submit" class="form__btn">Enviar</button>
+                <p class="form_ms-exito" id="form_ms-exito">form enviado exitosamente!</p>
+            </div>
+        </form>
+    </main>
+
+    <script src="js/ejercicio6.js"></script>
+</body>
+
+</html>

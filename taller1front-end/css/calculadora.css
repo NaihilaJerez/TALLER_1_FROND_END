@@ -1,0 +1,28 @@
+    body{
+        background-image: url(../img/CalcuBK.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .C{
+        width:200px;
+        height:400px;
+        margin-top: 150px;
+        margin-left: 600px;
+        padding: 50px;
+        background-color:#2c0c23;
+    }
+    .C td button{
+        width:60px;
+        height: 60px;
+    }
+    #RS{
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 30px;
+        width:250px;
+        height: 100px;
+        line-height: 100px;
+        background-color:#fff;
+        border-radius: 25px;
+        overflow-y: scroll;
+    }
