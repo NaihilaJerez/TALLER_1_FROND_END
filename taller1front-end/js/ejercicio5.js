@@ -1,87 +1,141 @@
-var calcular = document.getElementById('calcular');
-var calcularAC = document.getElementById('calcularAC');
-var calcularPT = document.getElementById('calcularPT');
-var calcularAT = document.getElementById('calcularAT');
-var calcularPR = document.getElementById('calcularPR');
-var calcularAR = document.getElementById('calcularAR');
-var calcularPC = document.getElementById('calcularPC');
-var calcularCC = document.getElementById('calcularCC');
+const abrir = document.querySelector('.carea')
+const Mo = document.querySelector('.Mo')
+const cMo = document.querySelector('.Crarm')
 
-calcular.onclick = function (e) {
-    medir();
+abrir.addEventListener('click', ()=>{
+    Mo.classList.add('Mo--show');
+});
+
+cMo.addEventListener('click', ()=>{
+    Mo.classList.remove('Mo--show');
+});
+
+function carea(){
+    const Val = document.getElementById("Valarea").value
+    const operacion = Val*Val*3.14;
+    alert("El área del circulo es = "+operacion)
+}
+const abrirp = document.querySelector('.cperi')
+const Mopc = document.querySelector('.Mopc')
+const cMopc = document.querySelector('.Crarpc')
+
+abrirp.addEventListener('click', ()=>{
+    Mopc.classList.add('Mo--show');
+});
+
+cMopc.addEventListener('click', ()=>{
+    Mopc.classList.remove('Mo--show');
+});
+
+function cperi(){
+    const Valp = document.getElementById("Valperi").value
+    const operacion = 2*3.14*Valp;
+    alert("El perimetro del circulo es = "+operacion)
+}
+const abrircd = document.querySelector('.cdarea')
+const Mocd = document.querySelector('.Mocd')
+const cMocd = document.querySelector('.Crarcd')
+
+abrircd.addEventListener('click', ()=>{
+    Mocd.classList.add('Mo--show');
+});
+
+cMocd.addEventListener('click', ()=>{
+    Mocd.classList.remove('Mo--show');
+});
+
+function cdarea(){
+    const Valcd = document.getElementById("Valareacd").value
+    const operacion = Valcd*Valcd;
+    alert("El área del cuadrado es = "+operacion)
 }
 
-calcularAC.onclick = function (e) {
-    medir();
+const abrircdp = document.querySelector('.cdperi')
+const Mocdp = document.querySelector('.Mocdp')
+const cMocdp = document.querySelector('.Crarcdp')
+
+abrircdp.addEventListener('click', ()=>{
+    Mocdp.classList.add('Mo--show');
+});
+
+cMocdp.addEventListener('click', ()=>{
+    Mocdp.classList.remove('Mo--show');
+});
+
+function cperi(){
+    const Valcdp = document.getElementById("Valpericd").value
+    const operacion = Valcdp*4;
+    alert("El área del cuadrado es = "+operacion)
 }
 
-calcularPT.onclick = function (e) {
-    medir();
+const abrirtr = document.querySelector('.areatr')
+const Motr = document.querySelector('.Motr')
+const cMotr = document.querySelector('.Crartr')
+
+abrirtr.addEventListener('click', ()=>{
+    Motr.classList.add('Mo--show');
+});
+
+cMotr.addEventListener('click', ()=>{
+    Motr.classList.remove('Mo--show');
+});
+function areatr(){
+    const base = document.getElementById("basetr").value
+    const altura = document.getElementById("alttr").value
+    const operacion = base*altura/2;
+    alert("El área del triangulo es = "+operacion)
 }
+const abrirttr = document.querySelector('.peritr')
+const Mottr = document.querySelector('.Mottr')
+const cMottr = document.querySelector('.Crarttr')
 
-calcularAT.onclick = function (e) {
-    medir();
+abrirttr.addEventListener('click', ()=>{
+    Mottr.classList.add('Mo--show');
+});
+
+cMottr.addEventListener('click', ()=>{
+    Mottr.classList.remove('Mo--show');
+});
+function peritr(){
+    const lado1 = document.getElementById("1").value
+    const lado2 = document.getElementById("2").value
+    const lado3 = document.getElementById("3").value
+    const operacion = lado1+lado2+lado3;
+    alert("El perimetro del triangulo es = "+operacion)
 }
+const abrirrec = document.querySelector('.crec')
+const Morec = document.querySelector('.Morec')
+const cMorec = document.querySelector('.Crarrec')
 
-calcularPR.onclick = function (e) {
-    medir();
+abrirrec.addEventListener('click', ()=>{
+    Morec.classList.add('Mo--show');
+});
+
+cMorec.addEventListener('click', ()=>{
+    Morec.classList.remove('Mo--show');
+});
+function arearec(){
+    const largor = document.getElementById("largo").value
+    const anchor = document.getElementById("ancho").value
+    const operacion = largor*anchor;
+    alert("El área del rectangulo es = "+operacion)
 }
-calcularAR.onclick = function (e) {
-    medir();
-}
-calcularPC.onclick = function (e) {
-    medir();
-}
-calcularCC.onclick = function (e) {
-    medir();
-}
+const abrirrep = document.querySelector('.prec')
+const Morep = document.querySelector('.Morep')
+const cMorep = document.querySelector('.Crarrep')
 
+abrirrep.addEventListener('click', ()=>{
+    Morep.classList.add('Mo--show');
+});
 
-function medir() {
-    var radio = document.getElementById('radio').value;
-    var diametro = document.getElementById('diametro').value;
-    var diametro1 = document.getElementById('diametro1').value;
-    var lado1 = document.getElementById('lado1').value;
-    var lado2 = document.getElementById('lado2').value;
-    var lado3 = document.getElementById('lado3').value;
-    var base = document.getElementById('base').value;
-    var altura = document.getElementById('altura').value;
-    var longitud = document.getElementById('longitu').value;
-    var ancho = document.getElementById('ancho').value;
-    var largo = document.getElementById('largo').value;
-    var anchoA = document.getElementById('anchoA').value;
-    var longitudPC = document.getElementById('longitudPC').value;
-    var longitudAC = document.getElementById('longitudAC').value;
-
-    var resultado = 0;
-
-    if (radio >= 1) {
-        resultado = 2 * 3.14159265359 * radio;
-        alert("El perimetro es: " + resultado);
-    } else if (diametro >= 1) {
-        resultado = 3.14159265359 * diametro;
-        alert("El perimetro es:  " + resultado);
-    } else if (diametro1 >= 1) {
-        resultado = diametro1 * diametro1 * 0.7854;
-        alert("El perimetro es : " + resultado);
-    } else if (lado1 >= 1 && lado2 >= 1 && lado3 >= 1) {
-        resultado = parseFloat(lado1) + parseFloat(lado1) + parseFloat(lado3);
-        alert("El Perimetro del Triangulo es: " + resultado);
-    } else if (base >= 1 && altura >= 1) {
-        resultado = (base * altura) / 2;
-        alert("El area del triangulo es: " + resultado)
-    } else if (longitud >= 1 && ancho >= 1) {
-        resultado = longitud * 2 + parseFloat(ancho * 2);
-        alert("El perimetro del rectangulo es: " + resultado)
-    } else if (largo >= 1 && anchoA >= 1) {
-        resultado = largo * anchoA
-        alert("El Area del rectangulo es: " + resultado);
-    } else if (longitudPC >= 1) {
-        resultado = longitudPC * 4;
-        alert("El perimetro del cuadrado es: " + resultado);
-    } else if (longitudAC >= 1) {
-        resultado = longitudAC * longitudAC;
-        alert("El area del cuadrado es: " + resultado);
-    }
-
+cMorep.addEventListener('click', ()=>{
+    Morep.classList.remove('Mo--show');
+});
+function cperi(){
+    const laado1 = document.getElementById("la1").value
+    const laado2 = document.getElementById("la2").value
+    const laado3 = document.getElementById("la3").value
+    const laado4 = document.getElementById("la4").value
+    const operacion = laado1+laado2+laado3+laado4;
+    alert("El área del rectangulo es = "+operacion)
 }
